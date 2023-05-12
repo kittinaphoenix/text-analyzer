@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Analyzer</title>
+<link rel="stylesheet" href="css/bootstrap.min.css"/><!--v4.4.1-->
+<link rel="stylesheet" href="css/gridstack.min.css"/><!--v4.2.1-->
+<link rel="stylesheet" href="css/gridstack-extra.min.css"/><!--v4.2.1-->
+<link rel="stylesheet" href="css/materialize.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="body">
+<!-- Modal -->
+<div class="custom-modal-container" id="input-modal">
+<div class="row">
+<div class="col">
+<div class="card modal-inside">
+<div class="card-action light-blue lighten-1 white-text">
+<h5 class="center-align">Natural Language Processing Analyzer</h5>
+</div>      
+<div class="card-content" id ="modal-body"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- loader -->
+<div id="full-screen" style="display: none;">
+<div id="loading-sections">
+<div class="row" id="steps-row"></div>
+<div class="row">
+<div class="col s12">
+<div class="progress">
+<div class="determinate" id="total-progress" style="width: 0%"></div>
+<span class="progress-text" id="progress-text">0%</span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col s12" id="current-step">
+<i class="fas fa-sync" id="step-icon"></i>
+<span id="step-text">Step</span>
+</div>
+</div>
+</div>
+</div>
+<!-- button -->
+<div class="floating-btn" onclick="refreshPage()">
+<i class="fa fa-plus"></i>
+</div>
+<script>
+function refreshPage() { location.reload(); }
+</script>
+<!-- body -->
+<div class="gridContainer">
+<div class="grid-stack"></div>
+</div>
+
+<script src="libs/jquery.min.js"></script>
+<script src="libs/materialize.min.js"></script>
+<script src="libs/gridstack-h5.js"></script><!--v4.2.1-->
+<script src="libs/d3.min.js"></script><!--v6.0.0-->
+<script src="libs/d3.layout.cloud.min.js"></script>
+
+<script src="src/script.tabs.js"></script><!--Script-->
+<script src="src/script.wordcloud.js"></script><!--Script-->
+<script src="src/script.result.js"></script><!--Script-->
+</body>
+</html>
